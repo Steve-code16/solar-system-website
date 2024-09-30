@@ -39,6 +39,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
@@ -73,7 +74,6 @@ header {
 
 .logo a {
   color: var(--primary-color);
-  text-decoration: none;
   user-select: none;
 }
 
@@ -131,4 +131,94 @@ header {
 
 .menu-btn i {
   margin-left: 5px;
+}
+
+/* navigation */
+.menu-container {
+  content-visibility: hidden;
+}
+
+.menu-window {
+  position: absolute;
+  background-color: var(--tr-bg-color-1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-box {
+  position: relative;
+  background-color: var(--secondary-color);
+  box-shadow: var(--box-shadow);
+  width: 600px;
+  height: fit-content;
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+  border-radius: 50px;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: -40px;
+  right: 50px;
+  color: var(--primary-color);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.menu-close-btn:hover {
+  color: var(--hover-red-color);
+}
+
+.menu-close-btn i {
+  font-size: 1.3em;
+}
+
+.menu-close-btn span {
+  font-size: 1.1em;
+}
+
+.menu-bg-icon {
+  position: absolute;
+  font-size: 10em;
+  opacity: 0.03;
+  top: 10px;
+  left: 35px;
+  transform: rotate(-5deg);
+  pointer-events: none;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.menu-items a {
+  color: var(--primary-color);
+  font-size: 1.05em;
+  font-weight: 400;
+  transition: 0.3s ease;
+}
+
+.menu-items a:hover {
+  color: var(--hover-dark-color);
+  transform: scale(1.05);
+}
+
+.menu-items a i {
+  font-size: 1.3em;
+  margin-right: 5px;
 }
