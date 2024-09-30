@@ -57,3 +57,78 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+/* header styles */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  z-index: 10;
+}
+
+.logo a {
+  color: var(--primary-color);
+  text-decoration: none;
+  user-select: none;
+}
+
+.logo .lg-font {
+  font-family: Rancho, cursive;
+  font-size: 3.9em;
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.logo .sm-font {
+  font-size: 1.7em;
+  font-weight: 500;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-box {
+  color: var(--d-gray-font-color);
+  background-color: var(--light-gray-bg-color);
+  width: 310px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+  border-radius: 30px;
+}
+
+.search-box i {
+  font-size: 1em;
+}
+
+.search-box input {
+  font-size: 1em;
+  background: none;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.menu-btn {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.menu-btn:hover {
+  color: var(--hover-dark-color);
+}
+
+.menu-btn i {
+  margin-left: 5px;
+}
