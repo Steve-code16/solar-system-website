@@ -22,13 +22,13 @@
   --box-shadow: 0 5px 25px rgba(0, 0, 0, 0.35);
 
   --mercury-bg: linear-gradient(45deg, #394147, #767f85);
-  --mercury-bg: linear-gradient(45deg, #ac1013, #e37b62);
-  --mercury-bg: linear-gradient(45deg, #005192, #0ea7eb);
-  --mercury-bg: linear-gradient(45deg, #ad1c1f, #e57a35);
-  --mercury-bg: linear-gradient(45deg, #ae5f4e, #e28482);
-  --mercury-bg: linear-gradient(45deg, #a04b36, #d1977c);
-  --mercury-bg: linear-gradient(45deg, #02396f, #0f81ad);
-  --mercury-bg: linear-gradient(45deg, #09225a, #4ab5e1);
+  --venus-bg: linear-gradient(45deg, #ac1013, #e37b62);
+  --earth-bg: linear-gradient(45deg, #005192, #0ea7eb);
+  --mars-bg: linear-gradient(45deg, #ad1c1f, #e57a35);
+  --jupiter-bg: linear-gradient(45deg, #ae5f4e, #e28482);
+  --saturn-bg: linear-gradient(45deg, #a04b36, #d1977c);
+  --uranus-bg: linear-gradient(45deg, #02396f, #0f81ad);
+  --neptune-bg: linear-gradient(45deg, #09225a, #4ab5e1);
 
   --scroll-bar-color: #f1f1f1;
   --scroll-bar-thumb-color: #555;
@@ -248,4 +248,242 @@ header {
 .menu-items a i {
   font-size: 1.3em;
   margin-right: 5px;
+}
+
+/* slider styles */
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+  height: 540px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.card {
+  position: relative;
+  width: 325px;
+  height: 250px;
+  border-radius: 25px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 50px;
+  user-select: none;
+  transition: height 0.5s ease;
+}
+
+.swiper-slide-prev .card {
+  height: 225px;
+}
+
+.swiper-slide-active .card {
+  height: 260px;
+}
+
+.swiper-slide-next .card {
+  height: 295px;
+}
+
+.mercury-bg {
+  background: var(--mercury-bg);
+}
+
+.venus-bg {
+  background: var(--venus-bg);
+}
+
+.earth-bg {
+  background: var(--earth-bg);
+}
+
+.mars-bg {
+  background: var(--mars-bg);
+}
+
+.jupiter-bg {
+  background: var(--jupiter-bg);
+}
+
+.saturn-bg {
+  background: var(--saturn-bg);
+}
+
+.uranus-bg {
+  background: var(--uranus-bg);
+}
+
+.neptune-bg {
+  background: var(--neptune-bg);
+}
+
+.card-img img {
+  position: absolute;
+  z-index: 5;
+  transition: 0.5s ease;
+  transition-delay: 0.1s;
+}
+
+.mercury-img {
+  width: 180px;
+  top: -45px;
+  right: 40px;
+}
+
+.venus-img {
+  width: 200px;
+  top: -60px;
+  right: 40px;
+}
+
+.earth-img {
+  width: 225px;
+  top: -80px;
+  right: 40px;
+}
+
+.mars-img {
+  width: 240px;
+  top: -95px;
+  right: 30px;
+}
+
+.jupiter-img {
+  width: 265px;
+  top: -125px;
+  right: 20px;
+}
+
+.saturn-img {
+  width: 350px;
+  top: -150px;
+  right: -30px;
+}
+
+.uranus-img {
+  width: 275px;
+  top: -105px;
+  right: 10px;
+}
+
+.neptune-img {
+  width: 195px;
+  top: -60px;
+  right: 45px;
+}
+
+.card:hover .mercury-img,
+.card:hover .venus-img,
+.card:hover .earth-img,
+.card:hover .jupiter-img,
+.card:hover .neptune-img {
+  transform: translateY(-40px) scale(1.1);
+}
+
+.card:hover .jupiter-img {
+  transform: translateY(-45px) scale(1.05);
+}
+
+.card:hover .mars-img,
+.card:hover .saturn-img,
+.card:hover .uranus-img {
+  transform: translateY(-45px) scale(1.1);
+}
+
+.card-img .planet-number {
+  position: absolute;
+  right: 0;
+  color: var(--secondary-color);
+  font-size: 12em;
+  font-weight: 700;
+  z-index: 4;
+  opacity: 0.1;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+}
+
+.card-content .info {
+  transform: translateY(30px);
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-content .info {
+  transform: translateY(-10px);
+}
+
+.card-content .info h2 {
+  color: var(--secondary-color);
+  font-size: 2.3em;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.card-content .sub-info {
+  display: flex;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.card-content .sub-info span {
+  color: var(--l-gray-font-color);
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+.card-content .sub-info h4 {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.card-content .read-more-btn {
+  transform: translateY(35px);
+  opacity: 0;
+  transition-property: transform, opacity;
+  transition: 0.3s ease-out, 0.5s;
+}
+
+.card:hover .card-content .read-more-btn {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+
+.card-content .read-more-btn button {
+  color: var(--secondary-color);
+  border: none;
+  background: none;
+  font-size: 0.9em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.card-content .read-more-btn button i {
+  font-size: 1.2em;
+  margin-left: 2px;
+  transition: 0.3s ease;
+}
+
+.card-content .read-more-btn button:hover i {
+  margin-left: 5px;
 }
