@@ -487,3 +487,28 @@ header {
 .card-content .read-more-btn button:hover i {
   margin-left: 5px;
 }
+
+/* slider navigation */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+
+.slider-nav {
+  position: absolute;
+  width: 190px;
+  bottom: 0;
+  right: 180px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  font-size: 1.1em;
+  font-weight: 400;
+  user-select: none;
+}
+
+.slider-nav i {
+  font-size: 2.1em;
+}
