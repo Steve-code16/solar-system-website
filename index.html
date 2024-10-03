@@ -32,6 +32,7 @@
               placeholder="Search Planets..."
             />
           </div>
+          <div class="search-results"></div>
         </div>
         <div class="main-menu">
           <a class="menu-btn"><span>Menu</span><i class="uil uil-apps"></i></a>
@@ -59,9 +60,9 @@
 
       <div class="slider-container">
         <div class="swiper cardSwiper">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper" id="cardContainer">
             <div class="swiper-slide">
-              <div class="card mercury-bg">
+              <div class="card mercury-bg" data-title="mercury">
                 <div class="card-img">
                   <img
                     src="./images/mercury.png"
@@ -89,7 +90,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card venus-bg">
+              <div class="card venus-bg" data-title="venus">
                 <div class="card-img">
                   <img
                     src="./images/venus.png"
@@ -117,7 +118,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card earth-bg">
+              <div class="card earth-bg" data-title="earth">
                 <div class="card-img">
                   <img
                     src="./images/earth.png"
@@ -145,7 +146,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card mars-bg">
+              <div class="card mars-bg" data-title="mars">
                 <div class="card-img">
                   <img src="./images/mars.png" class="mars-img" alt="planet" />
                   <span class="planet-number">4</span>
@@ -169,7 +170,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card jupiter-bg">
+              <div class="card jupiter-bg" data-title="jupiter">
                 <div class="card-img">
                   <img
                     src="./images/jupiter.png"
@@ -197,7 +198,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card saturn-bg">
+              <div class="card saturn-bg" data-title="saturn">
                 <div class="card-img">
                   <img
                     src="./images/saturn.png"
@@ -225,7 +226,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card uranus-bg">
+              <div class="card uranus-bg" data-title="uranus">
                 <div class="card-img">
                   <img
                     src="./images/uranus.png"
@@ -253,7 +254,7 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="card neptune-bg">
+              <div class="card neptune-bg" data-title="neptune">
                 <div class="card-img">
                   <img
                     src="./images/neptune.png"
