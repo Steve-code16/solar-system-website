@@ -61,7 +61,36 @@ var swiper = new Swiper(".cardSwiper", {
     1560: {
       slidesPerView: 4.4,
       slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
+      slidesOffsetAfter: 100,
     },
   },
+});
+
+const header = document.querySelector("header");
+const sliderNav = document.querySelector(".slider-nav");
+const mainMediaLinks = document.querySelector(".main-media-links");
+
+const modalContainer = document.querySelector(".modal-container");
+const modalBoxes = document.querySelectorAll(".modal-box");
+const modalContents = document.querySelectorAll(".modal-content");
+
+const readMoreBtns = document.querySelectorAll(".read-more-btn");
+
+const modalOpen = (readMoreBtnClick) => {
+  header.classList.add("hide");
+  sliderNav.classList.add("hide");
+  mainMediaLinks.classList.add("hide");
+
+  modalContainer.classList.add("active");
+  modalBoxes[readMoreBtnClick].classList.add("active");
+
+  setTimeout(() => {
+    modalContents[readMoreBtnClick].classList.add("active");
+  }, 2000);
+};
+
+readMoreBtns.forEach((readMoreBtn, i) => {
+  readMoreBtn.addEventListener("click", () => {
+    modalOpen(i);
+  });
 });
