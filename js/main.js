@@ -188,5 +188,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
       searchResults.appendChild(link);
     });
+
+    if (matchingCards.length > 0) {
+      searchResults.style.display = "block";
+    } else {
+      searchResults.style.display = "none";
+    }
+  });
+
+  const openModal = (cardTitle) => {
+    const modalToOpen = document.getElementById(
+      `modal_${cardTitle.replace(/\s/g, "")}`
+    );
+
+    if (modalToOpen) {
+      modalToOpen.classList.add("active");
+
+      header.classList.add("hide");
+      sliderNav.classList.add("hide");
+      mainMediaLinks.classList.add("hide");
+
+      modalContainer.classList.add("active");
+
+      const thisModalContent = modalToOpen.querySelector(".modal-content");
+
+      setTimeout(() => {
+        thisModalContent.classList.add("active");
+      }, 2000);
+
+      const addHideClassWithDelay = (elements) => {
+        elements.forEach((element, index) => {
+          const delay = 150;
+
+          setTimeout(() => {
+            element.classList.add("hide");
+          }, index * delay);
+        });
+      };
+
+      const startingElement = document.querySelector(
+        ".swiper-slide.swiper-slide-active"
+      );
+
+      if (startingElement) {
+        const elements = document.querySelectorAll(".swiper-slide");
+        const elementArray = Array.from(elements);
+        const startingIndex = elementArray.indexOf(startingElement);
+        const elementToHide = elementArray.slice(startingIndex);
+
+        const searchResultLinks = document.querySelectorAll(
+          ".search-result-link"
+        );
+
+        searchResultLinks.forEach((searchResultLink) => {
+          searchResultLink.addEventListener(
+            "click",
+            addHideClassWithDelay(elementToHide)
+          );
+        });
+      }
+
+      searchInput.value = "";
+    }
+  };
+
+  searchInput.addEventListener("input", () => {
+    if (searchInput.value.length === 0) {
+      searchResults.style.display = "none";
+    }
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.matches("#searchInput")) {
+      searchResults.style.display = "none";
+    }
   });
 });

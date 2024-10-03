@@ -126,6 +126,29 @@ header.hide {
   padding-left: 10px;
 }
 
+.search-results {
+  display: none;
+  position: absolute;
+  background: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.search-results a {
+  display: block;
+  color: var(--primary-color);
+  font-size: 1em;
+  padding: 10px;
+}
+
+.search-results a:hover {
+  background: var(--light-gray-bg-color);
+}
+
 .menu-btn {
   color: var(--primary-color);
   font-size: 1.1em;
