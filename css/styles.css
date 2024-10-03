@@ -281,6 +281,16 @@ header.hide {
   display: flex;
   justify-content: center;
   align-items: end;
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.5s ease;
+  transition-property: transform, opacity;
+  transition-delay: 0.25s;
+}
+
+.swiper-slide.hide {
+  transform: translateY(30px);
+  opacity: 0;
 }
 
 .card {
