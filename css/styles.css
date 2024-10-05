@@ -838,3 +838,281 @@ header.hide {
   font-size: 1em;
   font-weight: 300;
 }
+
+/* media queries */
+@media screen and (max-width: 1220px) {
+  .planet-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .search-container {
+    position: absolute;
+    transform: translateY(90px);
+  }
+
+  .planet-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 926px) {
+  .slider-nav {
+    right: 100px;
+  }
+
+  .main-media-links {
+    left: 80px;
+  }
+
+  .modal-inner {
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .modal-bg-title {
+    display: none;
+  }
+
+  .modal-media-icons {
+    top: 0;
+    left: unset;
+    right: 0;
+    transform: translateY(50px);
+    margin-right: 50px;
+  }
+
+  .modal-img {
+    width: 250px;
+  }
+
+  .modal-text-content {
+    margin: 0 0 50px 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    padding: 50px 30px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  .logo .lg-font {
+    font-size: 3.5em;
+  }
+
+  .logo .sm-font {
+    font-size: 1.5em;
+  }
+
+  .modal-inner {
+    align-items: start;
+  }
+
+  .modal-text-content p {
+    font-size: 0.9em;
+  }
+
+  .planet-facts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .menu-window.active .menu-box {
+    width: 90%;
+  }
+
+  .slider-nav {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+
+  .main-media-links {
+    bottom: 10px;
+    left: 25px;
+    font-size: 0.9em;
+    column-gap: 25px;
+  }
+
+  .modal-inner {
+    padding: 0 25px;
+  }
+
+  .modal-media-icons {
+    margin-left: 40px;
+  }
+
+  .modal-img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo a {
+    white-space: nowrap;
+  }
+
+  .logo .lg-font {
+    font-size: 3.2em;
+  }
+
+  .logo .sm-font {
+    font-size: 1.4em;
+  }
+
+  .search-container {
+    transform: translateY(80px) translateX(-50%);
+    left: 50%;
+  }
+
+  .menu-btn {
+    font-size: 1em;
+  }
+
+  .menu-box {
+    border-radius: 35px;
+  }
+
+  .menu-close-btn {
+    right: 30px;
+  }
+
+  .menu-bg-icon {
+    font-size: 7em;
+  }
+
+  .menu-items {
+    row-gap: 35px;
+  }
+
+  .modal-box {
+    border-radius: 35px;
+  }
+
+  .modal-close-btn {
+    right: 30px;
+  }
+
+  .modal-media-icons {
+    transform: translateY(25px);
+    margin-right: 30px;
+    row-gap: 15px;
+  }
+
+  .modal-media-icons a {
+    font-size: 1.3em;
+  }
+
+  .modal-image-area {
+    margin-right: 70px;
+  }
+
+  .modal-title {
+    font-size: 2.3em;
+  }
+
+  .modal-title-sub span {
+    font-size: 0.9em;
+  }
+
+  .modal-title-sub h4 {
+    font-size: 0.9em;
+  }
+
+  .modal-text-content p {
+    font-size: 0.85em;
+  }
+
+  .planet-facts .fact h5 {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+
+  .planet-facts .fact span {
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  header {
+    padding: 50px 17px;
+  }
+
+  .search-container {
+    width: 90%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 80%;
+  }
+
+  .menu-btn span {
+    display: none;
+  }
+
+  .menu-btn i {
+    font-size: 1.2em;
+  }
+
+  .menu-close-btn i {
+    font-size: 1.2em;
+  }
+
+  .menu-close-btn span {
+    font-size: 1em;
+  }
+
+  .menu-items a {
+    font-size: 1em;
+  }
+
+  .menu-items a i {
+    font-size: 1.2em;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .modal-close-btn i {
+    font-size: 1.2em;
+  }
+
+  .modal-close-btn span {
+    font-size: 1em;
+  }
+
+  .modal-media-icons {
+    margin-right: 22px;
+  }
+
+  .modal-media-icons a {
+    font-size: 1.2em;
+  }
+
+  .modal-img {
+    min-width: none;
+    width: 200px;
+  }
+
+  .planet-facts {
+    width: 100%;
+  }
+
+  .planet-facts .fact {
+    width: 100%;
+    padding: 15px;
+  }
+}
